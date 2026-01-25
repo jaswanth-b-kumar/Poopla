@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+# Project-specific venv
+/tfenv/
+
+# Model artifacts
+best_model*.h5
+
+# Datasets
+/dataset/
+/augmented_dataset/
+
+# Uploads
+/static/uploads/
+
+# Logs
+*.log
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Frontend (web)
+/web/node_modules/
+/web/dist/
+/web/.vite/
+
+# Build/cache
+*.cache
