@@ -1,0 +1,30 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: poopla-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: poopla
+      POSTGRES_PASSWORD: poopla
+      POSTGRES_DB: poopla
+    ports:
+      - "5432:5432"
+    volumes:
+      - poopla_postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./backend
+    container_name: poopla-backend
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql+pg8000://poopla:poopla@postgres:5432/poopla
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    volumes:
+      - ./backend/app:/app/app
+
+volumes:
+  poopla_postgres_data:
