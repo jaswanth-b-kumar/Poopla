@@ -38,6 +38,11 @@ Thumbs.db
 /web/node_modules/
 /web/dist/
 /web/.vite/
+/web/.next/
+/web/.turbo/
+
+# Codex local context
+/Codex Context/
 
 # Build/cache
 *.cache
