@@ -138,6 +138,28 @@ export default function NewCheckPage() {
               />
             </label>
 
+            <div className="field-grid">
+              <label className="field">
+                <span>Medical history or birth-related issues (optional)</span>
+                <textarea
+                  className="field-input text-area"
+                  name="medicalHistory"
+                  maxLength={240}
+                  placeholder="Example: premature birth, NICU stay, allergies"
+                />
+              </label>
+
+              <label className="field">
+                <span>Other symptoms (optional)</span>
+                <textarea
+                  className="field-input text-area"
+                  name="otherSymptoms"
+                  maxLength={240}
+                  placeholder="Example: fever, excessive crying, rashes"
+                />
+              </label>
+            </div>
+
             <label className="consent-row">
               <input type="checkbox" name="consent" />
               <span>
